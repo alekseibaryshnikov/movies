@@ -1,0 +1,38 @@
+div.app-movie-details{
+  margin: auto;
+  margin-top: 1.5rem ;
+  padding: 1.5rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: row wrap;
+  div.app-movie-details__title{
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 200%;
+    border-bottom: 1px solid #f3f3f3;
+    margin-bottom: 1.5rem;
+  }
+  div.app-movie-details__poster{
+    flex-basis: 35%;
+  }
+  div.app-movie-details__description{
+    flex-basis: 65%;
+    div.app-movies-details__genres{
+      display: flex;
+      span {
+        display: block;
+        border-right: 5px solid white;
+        background: red;
+        color: wheat;
+        padding: 0.25rem;
+        font-size: 0.8rem;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+        &:hover {
+          background: pink;
+          color: black;
+        }
+      }
+    }
+  }
+}

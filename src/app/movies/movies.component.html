@@ -1,0 +1,19 @@
+<div *ngFor="let movie of movies" class="app-movies__movie">
+  <div class="app-movies__movie__title">
+    <h1>
+      {{movie.name}}
+    </h1>
+  </div>
+  <div class="app-movies__movie__poster">
+    <img src="assets/images/movie-covers/{{movie.img}}">
+  </div>
+  <div class="app-movies__movie__description">
+    <p><strong>Genres:</strong></p>
+    <div class="app-movies__movie__genres">
+      <span *ngFor="let genre of movie.genres">{{genre}}</span>
+    </div>
+    <p><strong>Length:</strong> {{movie.length}}</p>
+    <p><strong>Rate:</strong> {{movie.rate}}</p>
+    <button routerLink="/detail/{{movie.key}}">Read more...</button>
+  </div>
+</div>
