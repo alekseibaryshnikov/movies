@@ -2,5 +2,7 @@
   <div class="app-header">
     <app-header></app-header>
   </div>
-  <router-outlet></router-outlet>
+  <main [@routerTransition]="getAnimation(o)">
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
 </div>

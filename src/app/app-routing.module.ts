@@ -12,9 +12,14 @@ const routes: Routes = [
   },
   {
     path: 'movies',
-    component: MoviesComponent
+    component: MoviesComponent,
+    data: { state: 'home' }
   },
-  { path: 'detail/:key', component: MoviesDetailComponent }
+  {
+    path: 'detail/:key',
+    component: MoviesDetailComponent,
+    data: { state: 'movieDetails' }
+  }
 ];
 
 @NgModule({

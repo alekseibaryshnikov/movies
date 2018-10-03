@@ -1,23 +1,23 @@
-div.app-movie-details{
+div.app-movie-details {
   margin: auto;
-  margin-top: 1.5rem ;
+  margin-top: 1.5rem;
   padding: 1.5rem;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-flow: row wrap;
-  div.app-movie-details__title{
+  div.app-movie-details__title {
     flex-basis: 100%;
     text-align: center;
     font-size: 200%;
     border-bottom: 1px solid #f3f3f3;
     margin-bottom: 1.5rem;
   }
-  div.app-movie-details__poster{
+  div.app-movie-details__poster {
     flex-basis: 35%;
   }
-  div.app-movie-details__description{
+  div.app-movie-details__description {
     flex-basis: 65%;
-    div.app-movies-details__genres{
+    div.app-movies-details__genres {
       display: flex;
       span {
         display: block;
@@ -34,5 +34,21 @@ div.app-movie-details{
         }
       }
     }
+  }
+}
+
+@media (max-width: 400px) {
+  div.app-movie-details {
+    div.app-movie-details__title {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 615px) {
+  div.app-movie-details {
+    justify-content: center;
   }
 }

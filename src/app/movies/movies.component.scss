@@ -36,17 +36,30 @@ div.app-movies__movie {
         }
       }
     }
-    button{
+    button {
       border: 0;
       background: yellow;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
       cursor: pointer;
-      transition: box-shadow .2s;
-      &:hover{
+      transition: box-shadow 0.2s;
+      &:hover {
         box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
       }
       outline: none;
-      box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     }
+  }
+}
+
+@media (max-width: 615px) {
+  div.app-movies__movie {
+    div.app-movies__movie__title {
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+  div.app-movies__movie {
+    justify-content: center;
   }
 }

@@ -1,12 +1,8 @@
 div.app-header {
-  display: grid;
-  grid-template-columns: 150px auto;
-  grid-template-rows: auto;
-  grid-gap: 1.5rem;
+  display: flex;
   margin: auto;
+  align-items: center;
   div.app-header__logo {
-    grid-column-start: 1;
-    grid-column-end: 1;
     font-size: 2rem;
     font-weight: bold;
     border: 1px dashed #cccccc;
@@ -21,17 +17,19 @@ div.app-header {
     outline: none;
   }
   div.app-header__search{
-    grid-column-start: 3;
-    grid-column-end: 3;
     align-self: center;
-    justify-self: right;
-    input{
-      border: 1px dashed #cccccc;
-      padding: .5rem;
-      outline-color: yellow;
-      &::placeholder{
-        color: #cccccc;
-      }
-    }
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  div.app-header {
+    flex-wrap: wrap;
+  }
+  div.app-header__logo{
+    flex-basis: 100%;
+  }
+  div.app-header__search{
+    flex-basis: 100%;
   }
 }
